@@ -1,3 +1,174 @@
 #wrapper {
     width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+}
+
+body {
+    background-color: #EDEBE8;
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 40px;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+    -webkit-transition: color ease-in 0.1s;
+    -moz-transition: color ease-in 0.1s;
+    -o-transition: color ease-in 0.1s;
+    transition: color ease-in 0.1s;
+}
+
+a:hover {
+    color: #20B2AA;
+}
+
+.picture {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 3px;
+    margin-right: 10px;
+    border: 2px solid #DEDCD9;
+  }
+  
+.picture_gross {
+    width: 0px;
+    margin-left: 10px;
+    position: absolute;
+    -webkit-transition: width 0.3s linear 0s;
+    -moz-transition: width 0.3s linear 0s;
+    -o-transition: width 0.3s linear 0s;
+    transition: width 0.3s linear 0s;
+    z-index: 10;
+    border: none;
+}
+  
+.picture:hover + .picture_gross {
+    width: 200px;
+}
+
+section {
+    width: 601px;
+    float: left;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    background-color: #F2F2F2;
+    border: 2px solid #DEDCD9;
+    border-radius: 10px;
+}
+
+.highlights {
+    height: 140px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.highlights img {
+    float: left;
+    padding: 3px;
+    margin-right: 10px;
+    border: 2px solid #DEDCD9;
+    border-radius: 5px;
+}
+
+.highlights a {
+    font-size: 18px;
+}
+
+aside {
+    width: 256px;
+    float: right;
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #F2F2F2;
+    border: 2px solid #DEDCD9;
+    border-radius: 10px;
+}
+
+.sonderangebote img {
+    padding: 5px;
+    margin-top: 15px;
+    border: 2px solid #DEDCD9;
+    border-radius: 5px;
+}
+
+.sonderangebote a {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.sonderangebote p {
+    padding: 5px;
+}
+
+footer {
+    background-color: #F2F2F2;
+    border: 2px solid #DEDCD9;
+    border-radius: 10px;
+    clear: both;
+}
+
+footer ul {
+    float: left;
+    list-style: none;
+    padding: 0px;
+    margin: 20px;
+}
+
+footer li {
+    margin-right: 15px;
+    display: inline;
+}
+
+footer p {
+    text-align: right;
+    margin-right: 20px;
+    color: #777;
+}
+
+#impressum {
+    margin: 15px;
+}
+
+#impressum h1 {
+    color: #777;
+    padding-bottom: 10px;
+}
+
+.Logo h1 {
+    color: #777;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.Logo img {
+    padding: 5px;
+    margin-top: 15px;
+    border: 2px solid #DEDCD9;
+    border-radius: 5px;
 }
