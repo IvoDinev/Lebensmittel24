@@ -126,6 +126,76 @@ aside {
     padding: 5px;
 }
 
+/*#suche {
+    background-color: #EDEBE8;
+    width: 10em;
+    border: none;
+    border-bottom: 2px solid #999;
+    font-size: 1.2em;
+    transition: width 0.5s ease-in-out;
+}
+   
+#suche:focus {
+    font-size: 1.5em;
+    width: 50%;
+}
+*/
+
+.search-box {
+
+    position: absolute;
+    top:22%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   }
+   
+.search-box:hover > .search-txt {
+    width: 150px;
+    padding: 0 6px;
+   }
+   
+.search-box:hover > .search-btn {
+    background: white;
+    color: black;
+   }
+   
+.search-btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+   }
+   
+.search-btn > i {
+    font-size: 30px;
+   }
+   
+.search-txt {   
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+   }
+
 footer {
     background-color: #F2F2F2;
     border: 2px solid #DEDCD9;
@@ -156,6 +226,15 @@ footer p {
 }
 
 #impressum h1 {
+    color: #777;
+    padding-bottom: 10px;
+}
+
+#FischnFleisch {
+    margin: 15px;
+}
+
+#FischnFleisch h1 {
     color: #777;
     padding-bottom: 10px;
 }
