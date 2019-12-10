@@ -16,51 +16,61 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="./../../navigation.css" />
     <title>Lebensmittel24</title>
   </head>
+
   <body>
-    <ul class="nav nav-tabs">
-      <li role="presentation">
-        <a href="../../homepage/homepage.html"
-          ><i class="fa fa-home fa-2x"></i
-        ></a>
-      </li>
-      <li role="presentation" class="dropdown">
-        <a
-          style="font-size: 20px;"
-          class="dropdown-toggle"
-          data-toggle="dropdown"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Produkte <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li class="active">
-            <a>Milchprodukte</a>
+    <nav class="navbar navbar-inverse">
+      <ul class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">Lebensmittel24</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li >
+            <a href="../../homepage/homepage.html" class="icon" data-toggle="tooltip" title="Home"
+              ><i class="fa fa-home fa-2x"></i
+            ></a>
           </li>
           <li>
-            <a href="../meatAndFish/meatFish.html">Fisch und Fleisch</a>
+            <a class="text-selected">Milchprodukte</a>
           </li>
-          <li><a href="../drinks/drinks.html">Getränke</a></li>
+          <li>
+            <a href="../meatAndFish/meatFish.html"
+              >Fisch und Fleisch</a
+            >
+          </li> 
+          <li><a href="../drinks/drinks.html">Getränke</a></li>        
           <li>
             <a href="../fruitsAndVegetables/fruitsVegetables.html"
               >Obst und Gemüse</a
             >
           </li>
+          <li class="dropdown">
+            <a class="dropbtn" href="../others/otherProducts.html"
+              >weitere<span class="caret"></span
+            ></a>
+            <ul class="dropdown-content">
+              <a class="dropdown-item">Baby & Kinder</a>
+              <a class="dropdown-item">Tabakwaren</a>
+              <a class="dropdown-item">Nonfood</a>
+              <hr>
+              <a class="dropdown-item-link" href="../others/otherProducts.html">Zur Katalogseite</a>
+            </ul>
+          </li>
         </ul>
-      </li>
-      <li role="presentation">
-        <a href="../../shoppingCart/cart.html"
-          ><i class="fa fa-shopping-cart fa-2x"></i
-        ></a>
-      </li>
-    </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li role="presentation">
+            <a class="icon"
+              href="../../shoppingCart/cart.html"
+              data-toggle="tooltip"
+              title="Zum Warenkorb!"
+              ><i class="fa fa-shopping-cart fa-2x"></i
+            ></a>
+          </li>
+        </ul>
+    </nav>
+
     <h1>Milchprodukte</h1>
   </body>
 </html>

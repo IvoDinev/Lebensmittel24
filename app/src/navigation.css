@@ -39,11 +39,16 @@
 
 .dropdown-item-link:hover {
   color: blue !important;
+  background-color: white !important;
+}
+
+.dropdown-item:hover {
+  background-color: white !important;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-}
+/* .dropdown-content a:hover {
+} */
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -67,23 +72,27 @@ hr {
   background-color: black;
 }
 
-ul {
-  margin-bottom: 0px;
-  height: 0px;
+.navbar-nav li a.text-selected {
+  background-color: blue;
 }
 
-.navbar-nav li a.selected {
+.navbar-nav li a.icon-selected {
+  padding-bottom: 11px;
+  padding-top: 10px;
   background-color: blue;
 }
 
 .navbar-nav li a.icon {
   padding-bottom: 11px;
   padding-top: 10px;
-  background-color: blue;
 }
 
 .nav.navbar-nav li a {
   color: white;
+}
+
+.nav.navbar-nav li a:hover {
+  background-color: blue;
 }
 
 .nav.navbar-nav li ul a {
@@ -114,4 +123,9 @@ ul {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+ul {
+  margin-bottom: 0px;
+  height: 0px;
 }
