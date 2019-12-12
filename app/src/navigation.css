@@ -1,0 +1,105 @@
+/* The container <div> - needed to position the dropdown content */
+.nav-div {
+  display: inline-block;
+  font-size: 0px;"
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  float: left;
+  min-width: 120px;
+  padding: 5px;
+  padding-bottom: 130px;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 2px 4px;
+  text-decoration: none;
+}
+
+.dropdown-item-link:hover {
+  color: blue !important;
+  background-color: white !important;
+}
+
+.dropdown-item:hover {
+  background-color: white !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropbtn:hover {
+  background-color: blue !important;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: blue;
+}
+
+hr {
+  margin: 5px;
+  height: 1px;
+  border: none;
+  color: black;
+  background-color: black;
+}
+
+.navimg {
+  height: 130px;
+  width: 244px;
+}
+
+.navbar-nav li a.text-selected {
+  background-color: blue;
+}
+
+.navbar-nav li a.icon-selected {
+  padding-bottom: 10px !important;
+  padding-top: 10px;
+  background-color: blue;
+}
+
+.navbar-nav li a.icon {
+  padding-bottom: 10px !important;
+  padding-top: 10px;
+}
+
+.nav.navbar-nav li a {
+  color: white;
+  padding-bottom: 14px;
+}
+
+.nav.navbar-nav li a:hover {
+  background-color: blue;
+}
+
+.nav.navbar-nav li ul a {
+  color: black;
+}
+
+.nav.navbar-nav.navbar-right li a {
+  margin-right: 5px;
+}
+
+ul {
+  margin-bottom: 0px;
+  height: 0px;
+}
