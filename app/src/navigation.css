@@ -1,4 +1,9 @@
 /* The container <div> - needed to position the dropdown content */
+.nav-div {
+  display: inline-block;
+  font-size: 0px;"
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -88,6 +93,10 @@ hr {
 
 .nav.navbar-nav li ul a {
   color: black;
+}
+
+.nav.navbar-nav.navbar-right li a {
+  margin-right: 5px;
 }
 
 ul {
