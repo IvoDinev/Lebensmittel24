@@ -1,0 +1,26 @@
+.mprodukt {
+  height: 400px;
+  width: 400px;
+
+  border-bottom: inset white 10px;
+  border-right: inset white 10px;
+
+  display: inline-block;
+  text-align: center;
+
+  position: relative;
+  background-color: aliceblue;
+  vertical-align: top;
+
+  margin: auto;
+  padding: 30px;
+}
+
+.items {
+  display: inline-block;
+  text-align: center;
+}
+
+.button {
+  background-image: image('addToBasket.png');
+}
