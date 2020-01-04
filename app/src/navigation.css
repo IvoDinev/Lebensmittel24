@@ -62,9 +62,14 @@ hr {
   background-color: black;
 }
 
+.navlogo {
+  height: 130px;
+  width: 194px;"
+}
+
 .navimg {
   height: 130px;
-  width: 244px;
+  width: 231px;
 }
 
 .navbar-nav li a.text-selected {
