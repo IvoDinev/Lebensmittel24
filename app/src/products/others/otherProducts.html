@@ -16,58 +16,57 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="../navigation.css" />
+    <link rel="stylesheet" type="text/css" href="./../../navigation.css" />
     <title>Lebensmittel24</title>
   </head>
 
   <body>
     <div class="nav-div">
-      <img style="height: 130px;" src="../common-pictures/Lebensmittel24Logo.jpg">
-      <img class="navimg" src="../common-pictures/food.jpg">
-      <img class="navimg" src="../common-pictures/food2.jpg">
-      <img class="navimg" src="../common-pictures/oreo.jpg">
-      <img class="navimg" src="../common-pictures/milk.jpg">
-      <img class="navimg" src="../common-pictures/fruits.jpg">
+      <img style="height: 130px;" src="../../common-pictures/Lebensmittel24Logo.jpg">
+      <img class="navimg" src="../../common-pictures/food.jpg">
+      <img class="navimg" src="../../common-pictures/food2.jpg">
+      <img class="navimg" src="../../common-pictures/oreo.jpg">
+      <img class="navimg" src="../../common-pictures/milk.jpg">
+      <img class="navimg" src="../../common-pictures/fruits.jpg">
     </div>
     <nav class="navbar navbar-inverse">
       <ul class="container-fluid">
         <ul class="nav navbar-nav">
           <li >
-            <a class="icon-selected" data-toggle="tooltip" title="Home"
+            <a href="../../homepage/homepage.html" class="icon" data-toggle="tooltip" title="Home"
               ><i class="fa fa-home fa-2x"></i
             ></a>
           </li>
           <li>
-            <a href="../products/milkproducts/milk.html">Milchprodukte</a>
+            <a href="../milkproducts/milk.html">Milchprodukte</a>
           </li>
           <li>
-            <a href="../products/meatAndFish/meatFish.html"
+            <a href="../meatAndFish/meatFish.html"
               >Fisch und Fleisch</a
             >
-          </li>
-          <li><a href="../products/drinks/drinks.html">Getränke</a></li>
+          </li> 
+          <li><a href="../drinks/drinks.html">Getränke</a></li>        
           <li>
-            <a href="../products/fruitsAndVegetables/fruitsVegetables.html"
+            <a href="../fruitsAndVegetables/fruitsVegetables.html"
               >Obst und Gemüse</a
             >
           </li>
           <li class="dropdown">
-            <a class="dropbtn" href="../products/others/otherProducts.html"
+            <a class="dropbtn" style="background-color: blue;" 
               >weitere<span class="caret"></span
             ></a>
-            <ul class="dropdown-content">
+            <ul class="dropdown-content" style="padding-bottom: 90px;">
               <a class="dropdown-item">Baby & Kinder</a>
               <a class="dropdown-item">Tabakwaren</a>
               <a class="dropdown-item">Nonfood</a>
               <hr>
-              <a class="dropdown-item-link" href="../products/others/otherProducts.html">Zur Katalogseite</a>
             </ul>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li>
+          <li role="presentation">
             <a class="icon"
-              href="../shoppingCart/cart.html"
+              href="../../shoppingCart/cart.html"
               data-toggle="tooltip"
               title="Zum Warenkorb!"
               ><i class="fa fa-shopping-cart fa-2x"></i
@@ -75,7 +74,7 @@
           </li>
         </ul>
     </nav>
-  
-    <h1>Webshop</h1>
+    
+    <p>Other products</p>
   </body>
 </html>
