@@ -87,10 +87,10 @@ let selectItems = (name, price) => {
     alert('Anzahl muss eine positive Zahl sein!');
     return;
   }
-  // if (input.value % 10 > 0) {
-  //   alert('Anzahl muss eine ganze Zahl sein!');
-  //   return;
-  // }
+  if (!Number.isInteger(input.value)) {
+    alert('Anzahl muss eine ganze Zahl sein!');
+    return;
+  }
   value = input.value;
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
@@ -142,7 +142,7 @@ let displayProducts = (productsPage, products) => {
       <button  onclick="selectItems('${item.name}', '${
       item.price
     }')" class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-      title="Zum Warenkorb hinzufügen!"> <img src="./addToShoppingCart.png"> </button>
+      title="Zum Warenkorb hinzufügen!"> <img src="../../common-pictures/addToShoppingCart.png"> </button>
       <br>      
       <label style="position: absolute; left: 110px">Einzelpreis:
       </label>
