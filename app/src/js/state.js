@@ -79,6 +79,7 @@ if (!state) {
 
 let selectItems = (name, price) => {
   let input = document.getElementById(`input_${name}`);
+  value = Number.parseFloat(input.value);
   if (input.value > 100) {
     alert('Maximal 100 Produkte können auf einmal gewählt werden');
     return;
@@ -87,11 +88,10 @@ let selectItems = (name, price) => {
     alert('Anzahl muss eine positive Zahl sein!');
     return;
   }
-  if (!Number.isInteger(input.value)) {
+  if (!Number.isInteger(value)) {
     alert('Anzahl muss eine ganze Zahl sein!');
     return;
   }
-  value = input.value;
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
   let itemPresents = false;
