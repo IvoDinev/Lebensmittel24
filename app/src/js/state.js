@@ -62,12 +62,71 @@ let milkproducts = [
   }
 ];
 
-let otherProducts = [
+let babyProducts = [
   {
-    name: 'Zigaretten',
+    name: 'Aptamil 1 800g',
+    img: 'https://www.edekanord-shop.de/product-images/761961/0/image496x496',
+    price: 14.99
+  },
+  {
+    name: 'Aptamil 2 800g',
+    img: 'https://www.edekanord-shop.de/product-images/761204/0/image496x496',
+    price: 14.89
+  },
+  {
+    name: 'Aptamil Kindermilch 1+ 600g',
+    img: 'https://www.edekanord-shop.de/product-images/321372/0/image496x496',
+    price: 9.99
+  },
+  {
+    name: 'Bio Hipp Couscous-Gemüse-Pfanne 190g',
+    img: 'https://www.edekanord-shop.de/product-images/359419/0/image496x496',
+    price: 1
+  },
+  {
+    name: 'Bio Hipp Eintopf Kartoffel-Rindfleisch-Eintopf 250g',
+    img: 'https://www.edekanord-shop.de/product-images/359376/0/image496x496',
+    price: 1.25
+  },
+  {
+    name: 'Bio Hipp Erdbeeren in Apfelgrieß 190g',
+    img: 'https://www.edekanord-shop.de/product-images/565884/0/image496x496',
+    price: 0.9
+  }
+];
+
+let tobaccoProducts = [
+  {
+    name: 'Statt Zigaretten',
     img:
       'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRNHibJ6Weu3L4EmjMwvpP-UxL9SpyZRpRx2z57X9fU8HPcBoMpt1u1HfA-z5cVekM9L5u5KMLDqClzdWW2M9nx63SkxrrFJoAaU5t4U-l22gVxjjFqxbBZag&usqp=CAc',
     price: 9.79
+  },
+  {
+    name: 'IQOS HEETS Bronze Selection',
+    img:
+      'https://ch.iqos.com/on/demandware.static/-/Sites-CH_Master_Catalog/default/dw6663d7e3/images/Heets-Packs-Sept/bronze_pack_desktop.png',
+    price: 5
+  },
+  {
+    name: 'IQOS HEETS Purple Label',
+    img: 'https://gigarettes.com/97-large_default/heets-purple.jpg',
+    price: 5
+  }
+];
+
+let nonFoodProducts = [
+  {
+    name: 'Zewa Ultra Soft Toilettenpapier 4-lagig 8x150 Blatt',
+    img:
+      'https://cdn02.dm-static.com/images/mediacatalog/h7322540739442-1822061/productimage_1120x1720/1574219861000/7322540739442-1822061_org.png',
+    price: 3
+  },
+  {
+    name: 'fit Spülmittel Original Geschirrspülmittel 100 ml Flasche',
+    img:
+      'https://cdn.idealo.com/folder/Product/924/7/924733/s1_produktbild_gross/original-spuelmittel-0-5-l.jpg',
+    price: 0.69
   }
 ];
 
@@ -125,8 +184,14 @@ let displayProducts = (productsPage, products) => {
     case 'fruitsAndVegs':
       productsCategory = fruitsAndVegs;
       break;
-    case 'otherProducts':
-      productsCategory = otherProducts;
+    case 'babyProducts':
+      productsCategory = babyProducts;
+      break;
+    case 'tobaccoProducts':
+      productsCategory = tobaccoProducts;
+      break;
+    case 'nonFoodProducts':
+      productsCategory = nonFoodProducts;
       break;
   }
   productsCategory.forEach(item => {
