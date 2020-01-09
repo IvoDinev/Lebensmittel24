@@ -62,6 +62,15 @@ let milkproducts = [
   }
 ];
 
+let otherProducts = [
+  {
+    name: 'Zigaretten',
+    img:
+      'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRNHibJ6Weu3L4EmjMwvpP-UxL9SpyZRpRx2z57X9fU8HPcBoMpt1u1HfA-z5cVekM9L5u5KMLDqClzdWW2M9nx63SkxrrFJoAaU5t4U-l22gVxjjFqxbBZag&usqp=CAc',
+    price: 9.79
+  }
+];
+
 let totalPrice = 0;
 
 if (!state) {
@@ -78,10 +87,10 @@ let selectItems = (name, price) => {
     alert('Anzahl muss eine positive Zahl sein!');
     return;
   }
-  if (input.value % 10 > 0) {
-    alert('Anzahl muss eine ganze Zahl sein!');
-    return;
-  }
+  // if (input.value % 10 > 0) {
+  //   alert('Anzahl muss eine ganze Zahl sein!');
+  //   return;
+  // }
   value = input.value;
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
@@ -115,6 +124,9 @@ let displayProducts = (productsPage, products) => {
       break;
     case 'fruitsAndVegs':
       productsCategory = fruitsAndVegs;
+      break;
+    case 'otherProducts':
+      productsCategory = otherProducts;
       break;
   }
   productsCategory.forEach(item => {
