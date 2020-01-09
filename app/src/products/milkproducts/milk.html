@@ -15,9 +15,10 @@
       rel="stylesheet"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
-    />
+    />    
     <link rel="stylesheet" type="text/css" href="./../../navigation.css" />
-    <link rel="stylesheet" type="text/css" href="./milk.css">
+    <link rel="stylesheet" type="text/css" href="../products.css">
+    <script src="../../js/state.js"></script>
     <title>Lebensmittel24</title>
   </head>
 
@@ -78,96 +79,9 @@
     </nav>
 
     <h1>Milchprodukte</h1>
-
-    <div class="items">
-      <div class="mprodukt">         
-        <img src="./milch.png" height="250" width="200" >           
-        <p>Weihenstephan Haltbare Milch  %3,5 Fett 1 L 1,30€</p>
-        <label>Anzahl        
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="./addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="milch2.png" height="250" width="200">
-        <p>Weihenstephan Haltbare Milch %1 Fett 1 L 1,30€</p>
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="kakao.png" height="250" width="200" >
-        <p>Weihenstephan Frischer Kakao 1 L 1,19€ </p>        
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>  
-
-      <div class="mprodukt">
-        <img src="butter.png" height="200" width="200" >
-        <p>Weihenstephan Butter 250g 3€</p>        
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="Joghurt.png" height="200" width="200" >
-        <p>Weihenstephan Rahmjoghurt 150g 0,89€</p>
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="kaese.png" height="200" width="200" >
-        <p>Weihenstephan Rahm-Romadur Käse 100g 1,19€</p>
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="Kaese2.png" height="200" width="250">
-        <p>Weihenstephan Rahm-Camembert 125g 1,59€</p>
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">
-        <img src="sahne.png" height="200" width="200" >
-        <p>Weihenstephan Sahne zum Kochen 250g 1,17€</p>        
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>
-      </div>
-  
-      <div class="mprodukt">         
-        <img src="buttermilch.png" height="200" width="200" >          
-        <p>Weihenstephan Buttermilch 500g 0,89€</p>
-        <label>Anzahl
-          <input type="number" min="1" step="1" max="100">
-        </label>
-        <button class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
-        title="Zum Warenkorb hinzufügen!"> <img src="addToShoppingCart.png"> </button>  
-      </div>
+  <div id="milkProductsPage">
+  </div>
+  <script>displayProducts('milkProductsPage', 'milkproducts')</script>
+      
   </body>
 </html>
