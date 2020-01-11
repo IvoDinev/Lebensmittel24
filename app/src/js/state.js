@@ -173,6 +173,36 @@ let selectItems = (name, price) => {
   alert(`${value}` + ' item(s) added to shopping cart!');
 };
 
+let removeItems = (name, selectedItemsNumber) => {
+  let input = document.getElementById(`input_${name}`);
+  let index;
+  itemsToRemove = Number.parseFloat(input.value);
+  remainingItems = selectedItemsNumber - itemsToRemove;
+  if (itemsToRemove > selectedItemsNumber) {
+    alert('Number of products to remove needs to be <= selected products');
+    return;
+  }
+  if (itemsToRemove === 0) {
+    alert('No items removed!');
+    return;
+  }
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  for (const item of state.selectedItems) {
+    if (item.name === name) {
+      item.value = remainingItems;
+      if (item.value === 0) {
+        index = state.selectedItems.indexOf(item);
+        state.selectedItems.splice(index, 1);
+      }
+      break;
+    }
+  }
+  alert('item removed');
+  sessionStorage.setItem('state', JSON.stringify(state));
+  location.reload();
+};
+
 let displayProducts = (productsPage, products) => {
   let container = document.getElementById(productsPage);
   let productsCategory = [];
@@ -227,12 +257,18 @@ let displaySelectedItems = () => {
   if (state.selectedItems.length > 0) {
     state.selectedItems.forEach(item => {
       container.innerHTML += `<p>${item.name}</p>
-    <p>Anzahl: ${item.value}</p>
+    <p id="count_${item.name}">Anzahl: ${item.value}</p>
     <p>Gesamtpreis: ${(Math.round(item.price * item.value * 100) / 100).toFixed(
       2
-    )}</p>`;
+    )}</p><label>Produkt entfernen</label>
+    <input id="input_${
+      item.name
+    }" type="number" min="1" step="1" max="100"><button onclick="removeItems('${
+        item.name
+      }', '${
+        item.value
+      }')" style="size: 10px"><img style="width: 10px; heigth: 10px;" src="../common-pictures/removeProducts.jpg"></button>`;
       totalPrice += item.value * item.price;
-      console.log(totalPrice);
     });
     container.innerHTML += `<p>Warenkorb Gesamtpreis: ${(
       Math.round(totalPrice * 100) / 100
