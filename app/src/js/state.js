@@ -198,7 +198,17 @@ let removeItems = (name, selectedItemsNumber) => {
       break;
     }
   }
+
   alert('item removed');
+  sessionStorage.setItem('state', JSON.stringify(state));
+  location.reload();
+};
+
+let emptyShoppingCart = () => {
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  state.selectedItems = [];
+  alert('All items removed');
   sessionStorage.setItem('state', JSON.stringify(state));
   location.reload();
 };
