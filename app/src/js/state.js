@@ -168,7 +168,7 @@ let selectItems = (name, price, img) => {
       }
     }
     if (!itemPresents) {
-      state.selectedItems.push({ name, value, price });
+      state.selectedItems.push({ name, value, price, img });
     }
   }
   sessionStorage.setItem('state', JSON.stringify(state));
