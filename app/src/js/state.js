@@ -138,7 +138,6 @@ if (!state) {
 }
 
 let selectItems = (name, price, img) => {
-  console.log(img);
   let input = document.getElementById(`input_${name}`);
   value = Number.parseFloat(input.value);
   if (input.value > 100) {
@@ -266,13 +265,15 @@ let displayProducts = (productsPage, products) => {
 
 let displaySelectedItems = () => {
   let cartContainer = document.getElementById('cart-container');
-  cartContainer.innerHTML += `<div class="row"><h3 id="heading"></h3></div>`;
+  cartContainer.innerHTML += `<div class="row" id="headingWrapper"></div>`;
   let state = sessionStorage.getItem('state');
   state = JSON.parse(state);
   totalItemsCount = state.selectedItems.length;
   if (state.selectedItems.length > 0) {
-    document.getElementById('heading').textContent =
-      'Ihr Warenkorb enthält ' + totalItemsCount + ' Artikel';
+    document.getElementById(
+      'headingWrapper'
+    ).innerHTML += `<h3>Ihr Warenkorb enthält ${totalItemsCount} Artikel</h3><button type="button" class="btn btn-danger" onclick="emptyShoppingCart()">Warenkorb leeren</button>
+      `;
     cartContainer.innerHTML += `<table class="table"><thead>
   <tr>
     <th scope="col"></th>
@@ -284,16 +285,16 @@ let displaySelectedItems = () => {
   </tr>
   </thead>
   <tbody id="tbody">`;
+    let tableContent = document.getElementById('tbody');
 
     state.selectedItems.forEach(item => {
-      console.log(item);
-      document.getElementById('tbody').innerHTML += `<tr><td><img src="${
+      tableContent.innerHTML += `<tr><td><img src="${
         item.img
       }" height="150" width="150"></td>
       <td>${item.name}</td>
       <td>${item.value}</td>
-      <td>${item.price}</td>
-      <td>${(Math.round(item.price * item.value * 100) / 100).toFixed(2)}</td>
+      <td>${item.price} €</td>
+      <td>${(Math.round(item.price * item.value * 100) / 100).toFixed(2)} €</td>
       <td><input id="input_${
         item.name
       }" type="number" min="1" step="1" max="100"><button onclick="removeItems('${
@@ -305,14 +306,14 @@ let displaySelectedItems = () => {
       totalPrice += item.value * item.price;
     });
 
-    cartContainer.innerHTML += `<p>Warenkorb Gesamtpreis: ${(
+    tableContent.innerHTML += `<tr><td></td><td></td><td></td><td></td><td></td><td style="width: 20%;"><h3>Gesamtpreis: ${(
       Math.round(totalPrice * 100) / 100
     ).toFixed(
       2
-    )}</p><button type="button" class="btn btn-danger" onclick="emptyShoppingCart()">Warenkorb leeren</button>`;
+    )} €</h3><br><button type="button" class="btn btn-success btn-lg" onclick="">Bestellen</button></td></tr>`;
   } else {
     alert('Keine Artikel sind gewählt!');
-    cartContainer.innerHTML += `<p>Es befinden sich keine Artikel im Warenkorb</p><button type="button" class="btn btn-danger" onclick="toHomepage()">Weiter einkaufen</button>`;
+    cartContainer.innerHTML += `<h3>Es befinden sich keine Artikel im Warenkorb</h3><button type="button" class="btn btn-danger btn-lg" onclick="toHomepage()">Weiter einkaufen</button>`;
   }
 };
 
