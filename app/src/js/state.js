@@ -160,8 +160,7 @@ let selectItems = (name, price, img) => {
   } else {
     for (const item of state.selectedItems) {
       if (item.name == name) {
-        let newValue = Number.parseInt(item.value) + Number.parseInt(value);
-        item.value = newValue;
+        item.value = Number.parseInt(item.value) + Number.parseInt(value);
         itemIsPresent = true;
         break;
       }
@@ -178,7 +177,6 @@ let removeItems = (name, selectedItemsNumber) => {
   let input = document.getElementById(`input_${name}`);
   let index;
   itemsToRemove = Number.parseFloat(input.value);
-  remainingItems = selectedItemsNumber - itemsToRemove;
   if (itemsToRemove > selectedItemsNumber) {
     alert(
       'Anzahl von Produkte zum Entfernen muss kleiner oder gleich der Anzahl der gewählte Produkte sein!'
@@ -189,6 +187,7 @@ let removeItems = (name, selectedItemsNumber) => {
     alert('Keine Produkte entfernt!');
     return;
   }
+  remainingItems = selectedItemsNumber - itemsToRemove;
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
   for (const item of state.selectedItems) {
