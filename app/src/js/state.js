@@ -17,47 +17,47 @@ let fruitsAndVegs = [
 let milkproducts = [
   {
     name: 'Weihenstephan Haltbare Milch  %3,5 Fett 1 L',
-    img: './milch.png',
+    img: 'milch.png',
     price: 1.3
   },
   {
     name: 'Weihenstephan Haltbare Milch %0,1 Fett 1 L',
-    img: './milch2.png',
+    img: 'milch2.png',
     price: 1.3
   },
   {
     name: 'Weihenstephan Frischer Kakao 1 L',
-    img: './kakao.png',
+    img: 'kakao.png',
     price: 1.19
   },
   {
     name: 'Weihenstephan Butter 250g',
-    img: './butter.png',
+    img: 'butter.png',
     price: 3
   },
   {
     name: 'Weihenstephan Rahmjoghurt 150g',
-    img: './Joghurt.png',
+    img: 'Joghurt.png',
     price: 0.89
   },
   {
     name: 'Weihenstephan Rahm-Romadur Käse 100g',
-    img: './kaese.png',
+    img: 'kaese.png',
     price: 1.19
   },
   {
     name: 'Weihenstephan Rahm-Camembert 125g',
-    img: './Kaese2.png',
+    img: 'Kaese2.png',
     price: 1.59
   },
   {
     name: 'Weihenstephan Sahne zum Kochen 250g',
-    img: './sahne.png',
+    img: 'sahne.png',
     price: 1.17
   },
   {
     name: 'Weihenstephan Buttermilch 500g',
-    img: './buttermilch.png',
+    img: 'buttermilch.png',
     price: 0.89
   }
 ];
@@ -131,12 +131,13 @@ let nonFoodProducts = [
 ];
 
 let totalPrice = 0;
+let totalItemsCount = 0;
 
 if (!state) {
   sessionStorage.setItem('state', JSON.stringify({ selectedItems: [] }));
 }
 
-let selectItems = (name, price) => {
+let selectItems = (name, price, img) => {
   let input = document.getElementById(`input_${name}`);
   value = Number.parseFloat(input.value);
   if (input.value > 100) {
@@ -153,24 +154,65 @@ let selectItems = (name, price) => {
   }
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
-  let itemPresents = false;
+  let itemIsPresent = false;
   if (state.selectedItems.length <= 0) {
-    state.selectedItems.push({ name, value, price });
+    state.selectedItems.push({ name, value, price, img });
   } else {
     for (const item of state.selectedItems) {
       if (item.name == name) {
-        let newValue = Number.parseInt(item.value) + Number.parseInt(value);
-        item.value = newValue;
-        itemPresents = true;
+        item.value = Number.parseInt(item.value) + Number.parseInt(value);
+        itemIsPresent = true;
         break;
       }
     }
-    if (!itemPresents) {
-      state.selectedItems.push({ name, value, price });
+    if (!itemIsPresent) {
+      state.selectedItems.push({ name, value, price, img });
     }
   }
   sessionStorage.setItem('state', JSON.stringify(state));
-  alert(`${value}` + ' item(s) added to shopping cart!');
+  alert(`${value}` + ' Produkte wurden in den Warenkorb hinzugefügt!');
+};
+
+let removeItems = (name, selectedItemsNumber) => {
+  let input = document.getElementById(`input_${name}`);
+  let index;
+  itemsToRemove = Number.parseFloat(input.value);
+  if (itemsToRemove > selectedItemsNumber) {
+    alert(
+      'Anzahl von Produkte zum Entfernen muss kleiner oder gleich der Anzahl der gewählte Produkte sein!'
+    );
+    return;
+  }
+  if (itemsToRemove === 0) {
+    alert('Keine Produkte entfernt!');
+    return;
+  }
+  remainingItems = selectedItemsNumber - itemsToRemove;
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  for (const item of state.selectedItems) {
+    if (item.name === name) {
+      item.value = remainingItems;
+      if (item.value === 0) {
+        index = state.selectedItems.indexOf(item);
+        state.selectedItems.splice(index, 1);
+      }
+      break;
+    }
+  }
+
+  alert('Produkt(e) entfernt!');
+  sessionStorage.setItem('state', JSON.stringify(state));
+  location.reload();
+};
+
+let emptyShoppingCart = () => {
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  state.selectedItems = [];
+  alert('Alle Artikel wurden vom Warenkorb entfernt!');
+  sessionStorage.setItem('state', JSON.stringify(state));
+  location.reload();
 };
 
 let displayProducts = (productsPage, products) => {
@@ -204,8 +246,8 @@ let displayProducts = (productsPage, products) => {
       <label>Anzahl        
         <input id="input_${item.name}" type="number" min="1" step="1" max="100">
       </label>      
-      <button  onclick="selectItems('${item.name}', '${
-      item.price
+      <button  onclick="selectItems('${item.name}', '${item.price}', '${
+      item.img
     }')" class="w3-button w3-xlarge w3-black" data-toggle="tooltip"
       title="Zum Warenkorb hinzufügen!"> <img src="../../common-pictures/addToShoppingCart.png"> </button>
       <br>      
@@ -221,23 +263,63 @@ let displayProducts = (productsPage, products) => {
 };
 
 let displaySelectedItems = () => {
-  let container = document.getElementById('cart-container');
+  let cartContainer = document.getElementById('cart-container');
+  cartContainer.innerHTML += `<div class="row" id="headingWrapper"></div>`;
   let state = sessionStorage.getItem('state');
   state = JSON.parse(state);
+  totalItemsCount = state.selectedItems.length;
   if (state.selectedItems.length > 0) {
+    document.getElementById(
+      'headingWrapper'
+    ).innerHTML += `<h3>Ihr Warenkorb enthält ${totalItemsCount} Artikel</h3><button type="button" class="btn btn-danger" onclick="emptyShoppingCart()">Warenkorb leeren</button>
+      `;
+    cartContainer.innerHTML += `<table class="table"><thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Artikel</th>
+    <th scope="col">Menge</th>
+    <th scope="col">Stückpreis</th>
+    <th scope="col">Preis</th>
+    <th scope="col">Produkt(e) entfernen</th>
+  </tr>
+  </thead>
+  <tbody id="tbody">`;
+    let tableContent = document.getElementById('tbody');
+
     state.selectedItems.forEach(item => {
-      container.innerHTML += `<p>${item.name}</p>
-    <p>Anzahl: ${item.value}</p>
-    <p>Gesamtpreis: ${(Math.round(item.price * item.value * 100) / 100).toFixed(
-      2
-    )}</p>`;
+      tableContent.innerHTML += `<tr><td><img src="${
+        item.img
+      }" height="150" width="150"></td>
+      <td>${item.name}</td>
+      <td>${item.value}</td>
+      <td>${item.price} €</td>
+      <td>${(Math.round(item.price * item.value * 100) / 100).toFixed(2)} €</td>
+      <td><input id="input_${
+        item.name
+      }" type="number" min="1" step="1" max="100"><button onclick="removeItems('${
+        item.name
+      }', '${
+        item.value
+      }')" style="size: 10px"><img style="width: 10px; heigth: 10px;" src="../common-pictures/removeProducts.jpg"></button></td>
+      </tr>`;
       totalPrice += item.value * item.price;
-      console.log(totalPrice);
     });
-    container.innerHTML += `<p>Warenkorb Gesamtpreis: ${(
+
+    tableContent.innerHTML += `<tr><td></td><td></td><td></td><td></td><td></td><td style="width: 20%;"><h3>Gesamtpreis: ${(
       Math.round(totalPrice * 100) / 100
-    ).toFixed(2)}</p>`;
+    ).toFixed(
+      2
+    )} €</h3><br><button type="button" class="btn btn-success btn-lg" onclick="toOrderPage()">Bestellen</button></td></tr>`;
   } else {
-    alert('No selected items');
+    alert('Keine Artikel sind gewählt!');
+    cartContainer.innerHTML += `<h3>Es befinden sich keine Artikel im Warenkorb</h3><button type="button" class="btn btn-danger btn-lg" onclick="toHomepage()">Weiter einkaufen</button>`;
   }
+};
+
+let toHomepage = () => {
+  window.location.href = '../homepage/homepage.html';
+};
+
+let toOrderPage = () => {
+  window.location.href = '../orderPage/order.html';
 };
