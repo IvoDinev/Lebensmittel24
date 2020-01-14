@@ -154,7 +154,7 @@ let selectItems = (name, price, img) => {
   }
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
-  let itemPresents = false;
+  let itemIsPresent = false;
   if (state.selectedItems.length <= 0) {
     state.selectedItems.push({ name, value, price, img });
   } else {
@@ -162,16 +162,16 @@ let selectItems = (name, price, img) => {
       if (item.name == name) {
         let newValue = Number.parseInt(item.value) + Number.parseInt(value);
         item.value = newValue;
-        itemPresents = true;
+        itemIsPresent = true;
         break;
       }
     }
-    if (!itemPresents) {
+    if (!itemIsPresent) {
       state.selectedItems.push({ name, value, price, img });
     }
   }
   sessionStorage.setItem('state', JSON.stringify(state));
-  alert(`${value}` + ' item(s) added to shopping cart!');
+  alert(`${value}` + ' Produkte wurden in den Warenkorb hinzugefügt!');
 };
 
 let removeItems = (name, selectedItemsNumber) => {
@@ -211,7 +211,7 @@ let emptyShoppingCart = () => {
   state = sessionStorage.getItem('state');
   state = JSON.parse(state);
   state.selectedItems = [];
-  alert('All items removed');
+  alert('Alle Artikel wurden vom Warenkorb entfernt!');
   sessionStorage.setItem('state', JSON.stringify(state));
   location.reload();
 };
@@ -310,7 +310,7 @@ let displaySelectedItems = () => {
       Math.round(totalPrice * 100) / 100
     ).toFixed(
       2
-    )} €</h3><br><button type="button" class="btn btn-success btn-lg" onclick="">Bestellen</button></td></tr>`;
+    )} €</h3><br><button type="button" class="btn btn-success btn-lg" onclick="toOrderPage()">Bestellen</button></td></tr>`;
   } else {
     alert('Keine Artikel sind gewählt!');
     cartContainer.innerHTML += `<h3>Es befinden sich keine Artikel im Warenkorb</h3><button type="button" class="btn btn-danger btn-lg" onclick="toHomepage()">Weiter einkaufen</button>`;
@@ -319,4 +319,8 @@ let displaySelectedItems = () => {
 
 let toHomepage = () => {
   window.location.href = '../homepage/homepage.html';
+};
+
+let toOrderPage = () => {
+  window.location.href = '../orderPage/order.html';
 };
