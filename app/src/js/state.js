@@ -2,15 +2,65 @@ let state = sessionStorage.getItem('state');
 
 let fruitsAndVegs = [
   {
-    name: 'banana',
-    img:
-      'https://images-na.ssl-images-amazon.com/images/I/61fZ%2BYAYGaL._SL1500_.jpg',
-    price: 1
+    name: 'Äpfel (Stück)',
+    img: 'https://img.rewe-static.de/1907545/21289326_digital-image.png',
+    price: 0.50
   },
   {
-    name: 'apples',
-    img: 'https://www.kroger.com/product/images/xlarge/front/0000000004129',
-    price: 1.5
+    name: 'Bananen Gelb (Stück)',
+    img:
+      'http://www.dole.de/var/storage/images/produkte/bio-produkte/bio-bananen/374-39-ger-DE/Bio-Bananen_productdetailstageimage.png',
+    price: 0.15
+  },
+  {
+    name: "Clementinen 1kg",
+    price: 1.69,
+    img: "https://img.rewe-static.de/8380889/30248452_digital-image.png?output-quality=75&fit=inside|600:600"
+  },
+  {
+    name: "Erdbeeren 500g",
+    price: 2.50,
+    img: "http://marktvertrieb.de/fileadmin/_processed_/csm_image_erdbeeren_fa134cc846.png"
+  },
+  {
+    name: "Himbeeren 125g",
+    img: "http://marktvertrieb.de/fileadmin/_processed_/csm_image_himbeeren_d5b4471b13.png",
+    price: 1.11
+  },
+  {
+    name: "Kartoffeln 2,5kg",
+    img: "https://img.rewe-static.de/2026616/21506395_digital-image.png?output-quality=75&fit=inside|600:600",
+    price: 2.49
+  },
+  {
+    name: "Knoblauch 100g",
+    img: "https://www.konsum-leipzig.de/media/image/e9/9c/bc/DV019_P999991484215177468_DETb2XH0qB8qdq2T.png",
+    price: 0.59
+  },
+  {
+    name: "Kopfsalat, Stück",
+    img: "https://img.rewe-static.de/0482684/11339830_digital-image.png",
+    price: 1.49
+  },
+  {
+    name: "Paprika 500g",
+    img: "http://proplanet-label.com/images/produkte/produktuebersicht/food/paprika.png",
+    price: 1.69
+  },
+  {
+    name: "Rotkohl, Stück",
+    img: "https://img.rewe-static.de/2430479/24569670_digital-image.png?output-quality=75&fit=inside|600:600",
+    price: 0.79
+  },
+  {
+    name: "Weißkohl, Stück",
+    img: "https://img.rewe-static.de/0570290/24569669_digital-image.png",
+    price: 0.59
+  },
+  {
+    name: "Zwiebeln 500g",
+    price: 0.69,
+    img: "http://fresh.bplaced.net/image/gem/zwiebel2.png"
   }
 ];
 
@@ -130,6 +180,217 @@ let nonFoodProducts = [
   }
 ];
 
+let drinksProducts = [
+  {
+    name: "Apfelsaft 1L",
+    img: "https://www.konsum-leipzig.de/media/image/26/93/d7/DV019_4311596461868_PERIXhfciiUbqWDJ.png",
+    price: 0.79
+  },
+  {
+    name: "Karottensaft 1L",
+    img: "https://www.konsum-leipzig.de/media/image/5c/7c/6d/DV019_4311596455188_VOR4xs9r6Hx07z1D.png",
+    price: 0.74
+  },
+  {
+    name: "Multivitaminsaft 1L",
+    img: "https://www.konsum-leipzig.de/media/image/0f/61/eb/DV019_4311596456246_PERMWKKSuBgjYVgq.png",
+    price: 0.89
+  },
+  {
+    name: 'Orangensaft 1L',
+    img:
+      'https://www.konsum-leipzig.de/media/image/79/11/d1/DV019_4311596442218_PER5hW7OXWhEf7TI.png',
+    price: 0.85
+  },
+  {
+    name: "Tomatensaft 1L",
+    img: "https://www.konsum-leipzig.de/media/image/61/1b/fa/DV019_4311596455126_PER7HXBBkUuLfsew.png",
+    price: 0.99
+  },
+  {
+    name: "Mineralwasser Classic 1,5L",
+    img: "https://www.konsum-leipzig.de/media/image/24/90/d1/DV019_4311596435944_PERiDRZzCDrsZu1U.png",
+    price: 0.19
+  },
+  {
+    name: "12er Kasten Mineralwasser Sprudel 1L",
+    img: "https://www.konsum-leipzig.de/media/image/6e/8f/58/DV019_4001513098467_PERQnZ0qlffRpmHL.png",
+    price: 6.99
+  },
+  {
+    name: "Mineralwasser Medium 1,5L",
+    img: "https://www.konsum-leipzig.de/media/image/ef/c9/d6/DV019_4311596435968_PERLsby3DWBBJpYy.png",
+    price: 0.19
+  },
+  {
+    name: "12er Kasten Mineralwasser Medium 1L",
+    img: "https://www.konsum-leipzig.de/media/image/5f/7e/9b/DV019_4001513098474_PERJw6cPlzjyWNYF.png",
+    price: 6.99
+  },
+  {
+    name: "Mineralwasser Still 1,5L",
+    img: "https://www.konsum-leipzig.de/media/image/59/9b/37/DV019_4311596435982_PER2OmMD0cYnr5ME.png",
+    price: 0.19
+  },
+  {
+    name: "6er Kasten Mineralwasser Still 1,5L",
+    img: "https://www.konsum-leipzig.de/media/image/c9/b8/ab/DV019_4001513100269_PERjBcqUddlujJ0G.png",
+    price: 5.49
+  },
+  {
+    name: "11ver Kasten Jever",
+    img: "https://www.konsum-leipzig.de/media/image/cb/a6/14/909.jpg",
+    price: 7.79
+  },
+  {
+    name: "20ger Kasten Radeberger",
+    img: "https://www.konsum-leipzig.de/media/image/fa/f7/a1/DV019_4014388002026_PERdCydKVwxcETr4.png",
+    price: 14.79
+  },
+  {
+    name: "20ger Kasten Hasseröder",
+    img: "https://www.konsum-leipzig.de/media/image/44/dc/8b/DV019_4014558126835_PERYfZGypKU0F6Ga.png",
+    price: 13.99
+  },
+  {
+    name: "Weißwein 0,75L",
+    img: "https://www.konsum-leipzig.de/media/image/f8/f4/b7/DV019_4014741380112_VORABMHRbkJK8tWU.png",
+    price: 3.99
+  },
+  {
+    name: "Rotwein 0.75L",
+    img: "https://www.konsum-leipzig.de/media/image/b2/93/48/DV019_3263280119023_VORU0npAOOiqPfDL.png",
+    price: 2.99
+  },
+  {
+    name: "Sekt 0.75L",
+    img: "https://www.konsum-leipzig.de/media/image/e5/a6/82/DV019_4400066903530_VORHCW8xvQURCGZ5.png",
+    price: 3.99
+  },
+  {
+    name: "Vodka 0,7L",
+    img: "https://www.konsum-leipzig.de/media/image/76/49/ce/DV019_7312040017683_VORBgtJOyFcjUX8v.png",
+    price: 14.99
+  },
+  {
+    name: "Rum 0,7L",
+    img: "https://www.konsum-leipzig.de/media/image/53/6f/cf/DV019_5000299223017_VOR9dIAEDC8sivch.png",
+    price: 11.99
+  },
+  {
+    name: "Pfefferminzlikör 0,7L",
+    img: "https://www.konsum-leipzig.de/media/image/99/f1/0e/DV019_4400065403109_VORAyaBtFhc4A8Du.png",
+    price: 3.69
+  },
+  {
+    name: "Tequila 0,7L",
+    img: "https://www.konsum-leipzig.de/media/image/7a/b6/6f/DV019_4062400115483_VORJKXzQjhcu6xpf.png",
+    price: 14.99
+  },
+  {
+    name: "Whiskey 0,7L",
+    img: "https://www.konsum-leipzig.de/media/image/7a/c1/d2/DV019_5010106113127_VORiMyAqvks5jUPc.png",
+    price: 14.99
+  }
+]
+
+let meatFishProducts = [
+  {
+    name: "Alaska-Seelachsfilet 200g",
+    img:
+      "https://www.konsum-leipzig.de/media/image/64/06/83/DV019_4311501669051_PERJWh9KaUirHeAf.png",
+    price: 2.49
+  },
+  {
+    name: 'Fleischklösschen',
+    img:
+      'https://www.konsum-leipzig.de/media/image/81/91/2d/DV019_4311501659724_PER3rrrL0VHeQf0N_600x600.png',
+    price: 1.99
+  },
+  {
+    name: "Frische Bratwurst",
+    img:
+      "https://www.konsum-leipzig.de/media/image/a3/ea/63/GUG_BRATWURSTGROB_VOR.png",
+    price: 1.49
+  },
+  {
+    name: 'Gemischtes Hackfleisch 500g',
+    img:
+      'https://www.aldi-nord.de/content/dam/aldi/germany/angebote/2019/kw30/artikelbilder/8680_30-2019_Hackfleisch_gemischt_0000_ON.png/_jcr_content/renditions/opt.1250w.png.res/1562071518309/opt.1250w.png', 
+    price: 2.49
+  },
+  {
+    name: "Hähnchenschnitzel 300g",
+    img:
+      "https://www.konsum-leipzig.de/media/image/0a/85/a1/DV019_4311501629130_PER8sKTwqfX37wxQ.png",
+    price: 2.29
+  },
+  {
+    name: 'Hähnchenfilet 500g',
+    img:
+      'https://www.konsum-leipzig.de/media/image/51/1f/fa/8830134528_1_print_600x600.png', 
+    price: 2.99
+  },
+  {
+    name: "Hähnchenkeulen 1,1kg",
+    img:
+      "https://www.konsum-leipzig.de/media/image/c3/66/90/GUG_HAEHNCHENKEULEN_VOR.png",
+    price: 2.99
+  },
+  {
+    name: 'Hühnerfrikasse',
+    img:
+      'https://www.konsum-leipzig.de/media/image/db/13/d3/DV019_4311596419050_PERD4twUiX3HmqPK_600x600.png',
+    price: 1.99
+  },
+  {
+    name: "Kabeljaufilet 300g",
+    img:
+      "https://www.konsum-leipzig.de/media/image/aa/f5/86/DV019_4311501671351_PERsmK6V4S85T9Sl.png",
+    price: 3.99
+  },
+  {
+    name: "Lachsfilet 300g",
+    img: "https://www.konsum-leipzig.de/media/image/10/42/0b/DV019_4311501668993_PERBzkgLBJrHubzG.png",
+    price: 4.79
+  },
+  {
+    name: "Puten Steak 500g",
+    img:
+      "https://www.konsum-leipzig.de/media/image/bb/c6/9d/GUG_PUTENSCHNITZEL_VOR.png",
+    price: 3.59
+  },
+  {
+    name: "Seelachsfilet ohne Haut 300g",
+    img: "https://www.konsum-leipzig.de/media/image/bd/88/fe/DV019_4311501669082_PERbTYP6QAxJldzL.png",
+    price: 2.99
+  },
+  {
+    name: 'Schinken Gulasch 500g',
+    img:
+      'https://www.konsum-leipzig.de/media/image/ab/66/d9/5551427276.png', 
+    price: 3.49
+  },
+  {
+    name: "Schinken Schnitzel 500g",
+    img: 
+      "https://www.konsum-leipzig.de/media/image/3a/15/f1/5551475824_1_print.png",
+    price: 3.29
+  },
+  {
+    name: "Schweine Minutensteaks 400g",
+    img:
+      "https://www.konsum-leipzig.de/media/image/ec/a4/06/5551475817.png",
+    price: 2.99
+  },
+  {
+    name: "Schweine Schnitzel 300g",
+    img: 
+      "https://www.konsum-leipzig.de/media/image/00/c8/76/DV019_4311501443101_PERl6M8jwBhcQNIz.png",
+    price: 2.29
+  }
+]
+
 let totalPrice = 0;
 let totalItemsCount = 0;
 
@@ -234,6 +495,12 @@ let displayProducts = (productsPage, products) => {
       break;
     case 'nonFoodProducts':
       productsCategory = nonFoodProducts;
+      break;
+    case 'drinksProducts':
+      productsCategory = drinksProducts;
+      break;
+    case 'meatFishProducts':
+      productsCategory = meatFishProducts;
       break;
   }
   productsCategory.forEach(item => {
