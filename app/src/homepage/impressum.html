@@ -4,26 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lebensmittel24 | Impressum</title>
+    <title>Lebensmittel24 | Home</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div id = "wrapper">
-        <header>
-          <img src="pictures/Logo.jpg" alt="Logo">
-        </header>
+      <header>
+        <img style="height: 130px;" src="../homepage/pictures/Lebensmittel24Logo.png" alt="Lebensmittel24"> <!-- vielleicht height raus-->
+      </header>
 
-        <nav>
-          <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="Fisch und Fleisch.html">Fisch und Fleisch</a></li>
-            <li>Obst und Gemüse</li>
-            <li>Milchprodukte</li>
-            <li>Getränke</li>
-            <li>Andere</li>
-          </ul>
-        </nav>
+      <nav class="navbar navbar-inverse">
+          <ul class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li >
+                <a class="icon-selected" data-toggle="tooltip" title="Home"
+                  ><i class="fa fa-home fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="../products/milkproducts/milk.html">Milchprodukte</a>
+              </li>
+              <li>
+                <a href="../products/meatAndFish/meatFish.html">Fisch und Fleisch</a>
+              </li>
+              <li>
+                <a href="../products/drinks/drinks.html">Getränke</a></li>
+              <li>
+                <a href="../products/fruitsAndVegetables/fruitsVegetables.html">Obst und Gemüse</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropbtn" href="../products/others/otherProducts.html">weitere<span class="caret"></span></a>
+                <ul class="dropdown-content">
+                  <a class="dropdown-item">Baby & Kinder</a>
+                  <a class="dropdown-item">Tabakwaren</a>
+                  <a class="dropdown-item">Nonfood</a>
+                  <hr>
+                  <a class="dropdown-item-link" href="../products/others/otherProducts.html">Zur Katalogseite</a>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a class="icon"
+                  href="../shoppingCart/cart.html"
+                  data-toggle="tooltip"
+                  title="Zum Warenkorb!"
+                  ><i class="fa fa-shopping-cart fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+      </nav>
         <section>
           <div id="impressum">
             <h1>Impressum</h1>
@@ -33,11 +73,13 @@
             <p>0123456789</p>
             <a>E-Mail:</a>
             <p>example@ovgu.de</p>
+            <a>Anschrift:</a>
+            <p>Universitätsplatz 2 <br>39106 Magdeburg</p>
           </div>
         </section>
         <aside>
           <div class="Logo">
-            <img src="pictures/Logo.jpg" alt="LM24">
+            <img style="width: 80%;" src="../homepage/pictures/Lebensmittel24Logo.png" alt="Lebensmittel24">
             <h1>Lebensmittel24</h1>
           </div>
         </aside>

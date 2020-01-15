@@ -2,16 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta 
-      name="viewport" 
-      content="width=device-width, initial-scale=1.0" 
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lebensmittel24 | Home</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
@@ -22,49 +17,71 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="../navigation.css" />
   </head>
   <body>
     <div id = "wrapper">
         <header>
-          <img src="pictures/Logo.jpg" alt="Logo">
+          <img style="height: 130px;" src="../homepage/pictures/Lebensmittel24Logo.png" alt="Lebensmittel24"> <!-- vielleicht height raus-->
         </header>
 
-        <nav>
-          <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="Fisch und Fleisch.html">Fisch und Fleisch</a></li>
-            <li>Obst und Gemüse</li>
-            <li>Milchprodukte</li>
-            <li>Getränke</li>
-            <li>Andere</li>
-          </ul>
-          <!-- <input type="search" id="suche" placeholder=" Suche..."> -->
-          <div class="search-box">
-            <input type="text" name="" class="search-txt" placeholder="Suche..."/>
-            <a class="search-btn" href="#">
-            <i class="fas fa-search"></i>
-            </a>
-            </div>
+        <nav class="navbar navbar-inverse">
+            <ul class="container-fluid">
+              <ul class="nav navbar-nav">
+                <li >
+                  <a class="icon-selected" data-toggle="tooltip" title="Home"
+                    ><i class="fa fa-home fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="../products/milkproducts/milk.html">Milchprodukte</a>
+                </li>
+                <li>
+                  <a href="../products/meatAndFish/meatFish.html">Fisch und Fleisch</a>
+                </li>
+                <li>
+                  <a href="../products/drinks/drinks.html">Getränke</a></li>
+                <li>
+                  <a href="../products/fruitsAndVegetables/fruitsVegetables.html">Obst und Gemüse</a>
+                </li>
+                <li class="dropdown">
+                  <a class="dropbtn" href="../products/others/otherProducts.html">weitere<span class="caret"></span></a>
+                  <ul class="dropdown-content">
+                    <a class="dropdown-item">Baby & Kinder</a>
+                    <a class="dropdown-item">Tabakwaren</a>
+                    <a class="dropdown-item">Nonfood</a>
+                    <hr>
+                    <a class="dropdown-item-link" href="../products/others/otherProducts.html">Zur Katalogseite</a>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a class="icon"
+                    href="../shoppingCart/cart.html"
+                    data-toggle="tooltip"
+                    title="Zum Warenkorb!"
+                    ><i class="fa fa-shopping-cart fa-2x"></i
+                  ></a>
+                </li>
+              </ul>
         </nav>
         <section>
           <div class="highlights">
             <img class="picture" src="pictures/Steak.jpg" alt="Steak">
             <img class="picture_gross" src="pictures/Steak.jpg" alt="Steak">
             <a href="#">Steak</a>
-            <p>super saftig, bio, etc</p>
+            <p>super saftig, bio, etc <br> <a href="#" style="font-size: 12px;">Zum Produkt</a></p>
           </div>
           <div class="highlights">
             <img class="picture" src="pictures/Milk.jpg" alt="Milch">
             <img class="picture_gross" src="pictures/Milk.jpg" alt="Milch">
             <a href="#">Milch</a>
-            <p>bio, etc</p>
+            <p>bio, etc <br> <a href="#" style="font-size: 12px;">Zum Produkt</a></p>
           </div>
           <div class="highlights">
             <img class="picture" src="pictures/Bier.jpg" alt="Bier">
             <img class="picture_gross" src="pictures/Bier.jpg" alt="Bier">
             <a href="#">Bier</a>
-            <p>süffig und würzig</p>
+            <p>süffig und würzig <br> <a href="#" style="font-size: 12px;">Zum Produkt</a></p>
           </div>
         </section>
         <aside>
