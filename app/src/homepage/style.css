@@ -1,10 +1,4 @@
-#wrapper {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 16px;
-    font-family: arial, sans-serif;
-}
+
 
 body {
     background-color: rgb(255, 255, 255);
@@ -134,147 +128,7 @@ header {
     margin-bottom: 0px;
     height: 0px;
   }
-  
-a {
-    color: #777;
-    text-decoration: none;
-    -webkit-transition: color ease-in 0.1s;
-    -moz-transition: color ease-in 0.1s;
-    -o-transition: color ease-in 0.1s;
-    transition: color ease-in 0.1s;
-}
-
-a:hover {
-    color: #20B2AA;
-}
-
-.picture {
-    width: 100px;
-    height: 100px;
-    float: left;
-    padding: 3px;
-    margin-right: 10px;
-    border: 2px solid #DEDCD9;
-  }
-  
-.picture_gross {
-    width: 0px;
-    margin-left: 10px;
-    position: absolute;
-    -webkit-transition: width 0.3s linear 0s;
-    -moz-transition: width 0.3s linear 0s;
-    -o-transition: width 0.3s linear 0s;
-    transition: width 0.3s linear 0s;
-    z-index: 10;
-    border: none;
-}
-  
-.picture:hover + .picture_gross {
-    width: 200px;
-}
-
-section {
-    width: 74%;
-    float: left;
-    padding: 15px;
-    margin-top: 15px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    background-color: rgba(56, 85, 252, 0.185);
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.highlights {
-    height: 140px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-}
-
-.highlights img {
-    float: left;
-    padding: 3px;
-    margin-right: 10px;
-    border: 2px solid #DEDCD9;
-    border-radius: 5px;
-}
-
-.highlights a {
-    font-size: 18px;
-}
-
-aside {
-    width: 25%;
-    float: right;
-    padding: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgba(56, 85, 252, 0.185);
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.sonderangebote img {
-    padding: 5px;
-    margin-top: 15px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.sonderangebote a {
-    font-size: 18px;
-    padding: 5px;
-}
-
-.sonderangebote p {
-    padding: 5px;
-}
-
-footer {
-    background-color: rgba(56, 85, 252, 0.185);
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    clear: both;
-}
-
-footer ul {
-    float: left;
-    list-style: none;
-    padding: 0px;
-    margin: 6px;
-    margin-left: 20px;
-}
-
-footer li {
-    margin-right: 15px;
-    display: inline;
-}
-
-footer p {
-    text-align: right;
-    margin-right: 30px;
-    margin: 6px;
-    color: #777;
-}
-
-#impressum {
-    margin: 15px;
-}
-
-#impressum h1 {
-    color: #777;
-    padding-bottom: 10px;
-}
-
-#FischnFleisch {
-    margin: 15px;
-}
-
-#FischnFleisch h1 {
-    color: #777;
-    padding-bottom: 10px;
-}
-
+ 
 .Logo h1 {
     color: #777;
     padding-bottom: 10px;
@@ -286,4 +140,68 @@ footer p {
     margin-top: 15px;
     border: 2px solid #DEDCD9;
     border-radius: 5px;
+}
+footer {
+  background: #222;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer h3 {
+ color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column {
+ overflow: hidden;
+}
+
+footer .three-column li{
+ width: 33.3333%;
+  float: left;
+  padding: 5px 0;
+}
+
+footer .socila-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+footer .socila-list li {
+  float: left;
+  margin-right: 3px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .socila-list li:hover {
+  opacity: 1;
+}
+
+footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  background: #333;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+footer .copyright span {
+  color: #0894d1;
 }
