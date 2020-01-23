@@ -55,14 +55,6 @@
   background-color: blue;
 }
 
-hr {
-  margin: 5px;
-  height: 1px;
-  border: none;
-  color: black;
-  background-color: black;
-}
-
 .navlogo {
   height: 130px;
   width: 10%;
@@ -105,7 +97,7 @@ hr {
   margin-right: 5px;
 }
 
-ul {
+.container-fluid ul {
   margin-bottom: 0px;
   height: 0px;
 }
