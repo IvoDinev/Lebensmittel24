@@ -70,13 +70,13 @@
 }
 
 .navbar-nav li a.icon-selected {
-  padding-bottom: 10px !important;
+  padding-bottom: 7px !important;
   padding-top: 10px;
   background-color: blue;
 }
 
 .navbar-nav li a.icon {
-  padding-bottom: 10px !important;
+  padding-bottom: 7px !important;
   padding-top: 10px;
 }
 
