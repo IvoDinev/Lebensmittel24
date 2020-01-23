@@ -15,38 +15,35 @@
       rel="stylesheet"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="./../../navigation.css" />
-    <link rel="stylesheet" type="text/css" href="../products.css">
-    <script src="../../js/state.js"></script>
-    <title>Bestellbestätigung</title>
+    />    
+    <link rel="stylesheet" type="text/css" href="../navigation.css" />    
+    <script src="../js/state.js"></script>
+    <title>Lebensmittel24</title>
     </head>
 
     <body>
-    <div class="nav-div">
-        <img class="navlogo" src="../../common-pictures/Lebensmittel24Logo.jpg">
-        <img class="navimg" src="../../common-pictures/food.jpg">
-        <img class="navimg" src="../../common-pictures/food2.jpg">
-        <img class="navimg" src="../../common-pictures/oreo.jpg">
-        <img class="navimg" src="../../common-pictures/milk.jpg">
-        <img class="navimg" src="../../common-pictures/fruits.jpg">
-        <img class="navimg" src="../../common-pictures/burger.jpg">
-        <img class="navimg" src="../../common-pictures/food3.jpg">
-        <img class="navimg" src="../../common-pictures/pizza.jpg">
-        <img class="navimg" src="../../common-pictures/food4.jpg">
+      <div class="nav-div">
+        <img class="navlogo" src="../common-pictures/Lebensmittel24Logo.jpg">
+        <img class="navimg" src="../common-pictures/food.jpg">
+        <img class="navimg" src="../common-pictures/food2.jpg">
+        <img class="navimg" src="../common-pictures/oreo.jpg">
+        <img class="navimg" src="../common-pictures/milk.jpg">
+        <img class="navimg" src="../common-pictures/fruits.jpg">
+        <img class="navimg" src="../common-pictures/burger.jpg">
+        <img class="navimg" src="../common-pictures/food3.jpg">
+        <img class="navimg" src="../common-pictures/pizza.jpg">
+        <img class="navimg" src="../common-pictures/food4.jpg">
       </div>
       <nav class="navbar navbar-inverse">
         <ul class="container-fluid">
           <ul class="nav navbar-nav">
             <li >
-              <a href="../../homepage/homepage.html" class="icon" data-toggle="tooltip" title="Home"
+              <a href="../homepage/homepage.html" class="icon" data-toggle="tooltip" title="Home"
                 ><i class="fa fa-home fa-2x"></i
               ></a>
             </li>
             <li>
-                <a href="../products/milkproducts/milk.html"
-                >Milchprodukte</a
-              >
+              <a href="../products/milkproducts/milk.html">Milchprodukte</a>
             </li>
             <li>
               <a href="../products/meatAndFish/meatFish.html"
@@ -64,13 +61,20 @@
                 >weitere<span class="caret"></span
               ></a>
               <ul class="dropdown-content">
+                <a class="dropdown-item">Baby & Kinder</a>
+                <a class="dropdown-item">Tabakwaren</a>
+                <a class="dropdown-item">Nonfood</a>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li role="presentation">
+              <a class="text-selected"
+                >Bestellung!</a>
+            </li>
+            <li role="presentation">
               <a class="icon"
-                href="../../shoppingCart/cart.html"
+                href="../shoppingCart/cart.html"
                 data-toggle="tooltip"
                 title="Zum Warenkorb!"
                 ><i class="fa fa-shopping-cart fa-2x"></i
@@ -78,24 +82,11 @@
             </li>
           </ul>
       </nav>
+      <script>postOrder()</script>
       <h1>Bestellbestätigung</h1>
       <h3>Vielen Dank für Ihren Einkauf. Die Ware wird nie bei Ihnen ankommen. Ihr Lebensmittel24 Team.</h3>
-
+      <button class="btn btn-danger" onclick="toHomepage()">Zurück zur Startseite</button>
       <img src="https://seybold.de/seybold-inhalt/uploads/Gr%C3%BCnerHaken-mit-M%C3%A4nnchen-1030x1030.jpg" width="1200" height="600" 
      alt="Logo für HTML-Seminar">
-
-    </br>
-    </br>
-    </br>
-      <input type="button" value="Zurück zur Startseite" onclick="zurStartseite()">
-
-              <script>
-               function zurStartseite()  {
-                 
-                   window.location.href=("../../src/homepage/homepage.html")
-               }
-              </script>
-
-
-    </body>
+  </body>
 </html>

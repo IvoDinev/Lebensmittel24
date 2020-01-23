@@ -617,3 +617,10 @@ let toHomepage = () => {
 let toOrderPage = () => {
   window.location.href = '../orderPage/order.html';
 };
+
+let postOrder = () => {
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  state.selectedItems = [];
+  sessionStorage.setItem('state', JSON.stringify(state));
+};
