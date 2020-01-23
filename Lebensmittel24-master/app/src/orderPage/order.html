@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />    
+    <link rel="stylesheet" type="text/css" href="./../../navigation.css" />
+    <link rel="stylesheet" type="text/css" href="order.css"/>
+    <script src="../../js/state.js"></script>
+    <title>Lebensmittel24</title>
+  </head>
+
+
+<body>
+    <div class="nav-div">
+        <img class="navlogo" src="../../common-pictures/Lebensmittel24Logo.jpg">
+        <img class="navimg" src="../../common-pictures/food.jpg">
+        <img class="navimg" src="../../common-pictures/food2.jpg">
+        <img class="navimg" src="../../common-pictures/oreo.jpg">
+        <img class="navimg" src="../../common-pictures/milk.jpg">
+        <img class="navimg" src="../../common-pictures/fruits.jpg">
+        <img class="navimg" src="../../common-pictures/burger.jpg">
+        <img class="navimg" src="../../common-pictures/food3.jpg">
+        <img class="navimg" src="../../common-pictures/pizza.jpg">
+        <img class="navimg" src="../../common-pictures/food4.jpg">
+      </div>
+      <nav class="navbar navbar-inverse">
+        <ul class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="../../homepage/homepage.html" class="icon" data-toggle="tooltip" title="Home"
+                ><i class="fa fa-home fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a class="text-selected">Milchprodukte</a>
+            </li>
+            <li>
+              <a href="../meatAndFish/meatFish.html"
+                >Fisch und Fleisch</a
+              >
+            </li> 
+            <li><a href="../drinks/drinks.html">Getränke</a></li>        
+            <li>
+              <a href="../fruitsAndVegetables/fruitsVegetables.html"
+                >Obst und Gemüse</a
+              >
+            </li>
+            <li class="dropdown">
+              <a class="dropbtn" href="../others/otherProducts.html"
+                >weitere<span class="caret"></span
+              ></a>
+              <ul class="dropdown-content">
+                <a class="dropdown-item">Baby & Kinder</a>
+                <a class="dropdown-item">Tabakwaren</a>
+                <a class="dropdown-item">Nonfood</a>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li role="presentation">
+              <a class="icon"
+                href="../../shoppingCart/cart.html"
+                data-toggle="tooltip"
+                title="Zum Warenkorb!"
+                ><i class="fa fa-shopping-cart fa-2x"></i
+              ></a>
+            </li>
+          </ul>
+      </nav>
+  
+      <div class="container-fluid">
+
+        
+
+        <form method="GET" onsubmit = "return validateForm()" action="file:///C:/Users/rqtua/Downloads/Lebensmittel24-master/Lebensmittel24-master/app/src/products/milkproducts/bestellbest%C3%A4tigung.html">
+        
+            
+  <section class="order-form my-4 mx-4">
+    <div class="container pt-4">
+
+      <div class="row">
+        <div class="col-12">
+          <h1>Bestellformular</h1>
+          <span>Bitte fullen Sie das Formular aus.</span>
+          <hr class="mt-1">
+        </div>
+        <div class="col-12">
+
+          <div class="row mx-4">
+            <div class="col-12 mb-2">
+              <label class="order-form-label">Name</label>
+            </div>
+            <div class="col-12 col-sm-6">
+              <input class="order-form-input" placeholder="First" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 mt-sm-0">
+              <input class="order-form-input" placeholder="Last" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label" for="date-picker-example">Date</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input datepicker" placeholder="Selected date" type="text"
+                id="date-picker-example">
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">Adress</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" placeholder="Street Address" required>
+            </div>
+            <div class="col-12 mt-2">
+              <input class="order-form-input" placeholder="Street Address Line 2">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input class="order-form-input" placeholder="City" aria-required="">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pl-sm-0">
+              <input class="order-form-input" placeholder="Region" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input class="order-form-input" placeholder="Postal / Zip Code" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pl-sm-0">
+              <input class="order-form-input" placeholder="Country" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1" required>
+                <label for="validation" class="form-check-label">I know what I need to know</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-12">
+                <button type="submit">Jetzt verbindlich kaufen</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+                  <tr>
+                    <td></td>
+                  </tr>
+            
+              
+              </form>
+
+            
+              
+              
+
+
+</body>
+</html>
