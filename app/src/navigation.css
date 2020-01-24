@@ -1,7 +1,8 @@
 /* The container <div> - needed to position the dropdown content */
+
 .nav-div {
   display: inline-block;
-  font-size: 0px;"
+  font-size: 0px;
 }
 
 .dropdown {
@@ -54,14 +55,6 @@
   background-color: blue;
 }
 
-hr {
-  margin: 5px;
-  height: 1px;
-  border: none;
-  color: black;
-  background-color: black;
-}
-
 .navlogo {
   height: 130px;
   width: 10%;
@@ -77,13 +70,13 @@ hr {
 }
 
 .navbar-nav li a.icon-selected {
-  padding-bottom: 10px !important;
+  padding-bottom: 7px !important;
   padding-top: 10px;
   background-color: blue;
 }
 
 .navbar-nav li a.icon {
-  padding-bottom: 10px !important;
+  padding-bottom: 7px !important;
   padding-top: 10px;
 }
 
@@ -104,7 +97,53 @@ hr {
   margin-right: 5px;
 }
 
-ul {
+.container-fluid ul {
   margin-bottom: 0px;
   height: 0px;
+}
+
+footer {
+  background: #222;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer h3 {
+  color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .list-unstyled {
+  height: 100%;
+  overflow: hidden;
+  line-height: 200%;
+}
+
+footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+footer .prodImg {
+  height: 64px;
+}
+footer .copyright {
+  padding: 15px 0;
+  background: #333;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+footer .copyright span {
+  color: #0894d1;
 }
