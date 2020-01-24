@@ -74,47 +74,56 @@ let fruitsAndVegs = [
 let milkproducts = [
   {
     name: 'Weihenstephan Haltbare Milch  %3,5 Fett 1 L',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/milch/frische_milch/fmilch_1l_35.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/milch/frische_milch/fmilch_1l_35.png',
     price: 1.3
   },
   {
     name: 'Weihenstephan Haltbare Milch %0,1 Fett 1 L',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/milch/haltbare_milch/hmilch_1l_01.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/milch/haltbare_milch/hmilch_1l_01.png',
     price: 1.3
   },
   {
     name: 'Weihenstephan Frischer Kakao 1 L',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kakao/kakao_1l.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kakao/kakao_1l.png',
     price: 1.19
   },
   {
     name: 'Weihenstephan Butter 250g',
-    img: 'https://www.abholen.de/media/image/e6/fa/a1/Weihenstephan_butter5a7d12ed9dfcd.png',
+    img:
+      'https://www.abholen.de/media/image/e6/fa/a1/Weihenstephan_butter5a7d12ed9dfcd.png',
     price: 3
   },
   {
     name: 'Weihenstephan Rahmjoghurt 150g',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/naturjoghurt/rajo_500g_natur_10fett.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/naturjoghurt/rajo_500g_natur_10fett.png',
     price: 0.89
   },
   {
     name: 'Weihenstephan Rahm-Romadur Käse 100g',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kaese/kaese_rahm_romadur.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kaese/kaese_rahm_romadur.png',
     price: 1.19
   },
   {
     name: 'Weihenstephan Rahm-Camembert 125g',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kaese/kaese_camembert_rahm_cremigster.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/kaese/kaese_camembert_rahm_cremigster.png',
     price: 1.59
   },
   {
     name: 'Weihenstephan Sahne zum Kochen 250g',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/sahne/sahne_250g_zum_kochen.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/produkte/sahne/sahne_250g_zum_kochen.png',
     price: 1.17
   },
   {
     name: 'Weihenstephan Buttermilch 500g',
-    img: 'https://www.molkerei-weihenstephan.de/fileadmin/media/unternehmen/Weg_der_Milch/wegbuttermilch.png',
+    img:
+      'https://www.molkerei-weihenstephan.de/fileadmin/media/unternehmen/Weg_der_Milch/wegbuttermilch.png',
     price: 0.89
   }
 ];
@@ -616,4 +625,11 @@ let toHomepage = () => {
 
 let toOrderPage = () => {
   window.location.href = '../orderPage/order.html';
+};
+
+let postOrder = () => {
+  state = sessionStorage.getItem('state');
+  state = JSON.parse(state);
+  state.selectedItems = [];
+  sessionStorage.setItem('state', JSON.stringify(state));
 };

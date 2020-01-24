@@ -16,14 +16,13 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />    
-    <link rel="stylesheet" type="text/css" href="../navigation.css" />
-    <link rel="stylesheet" type="text/css" href="./order.css">
+    <link rel="stylesheet" type="text/css" href="../navigation.css" />    
     <script src="../js/state.js"></script>
     <title>Lebensmittel24</title>
-  </head>
+    </head>
 
-  <body>
-    <div class="nav-div">
+    <body>
+      <div class="nav-div">
         <img class="navlogo" src="../common-pictures/Lebensmittel24Logo.jpg">
         <img class="navimg" src="../common-pictures/food.jpg">
         <img class="navimg" src="../common-pictures/food2.jpg">
@@ -62,6 +61,9 @@
                 >weitere<span class="caret"></span
               ></a>
               <ul class="dropdown-content">
+                <a class="dropdown-item">Baby & Kinder</a>
+                <a class="dropdown-item">Tabakwaren</a>
+                <a class="dropdown-item">Nonfood</a>
               </ul>
             </li>
           </ul>
@@ -75,44 +77,16 @@
                 href="../shoppingCart/cart.html"
                 data-toggle="tooltip"
                 title="Zum Warenkorb!"
-                ><i class="fa fa-shopping-cart fa-2x"></i
+                ><i  class="fa fa-shopping-cart fa-2x"></i
               ></a>
             </li>
           </ul>
       </nav>
-      <div class="container">
-        <h2 style="text-align: center;">Bestellformular</h2>
-        <hr>
-        <br>
-        <h4 style="margin-bottom: 50px;">Bitte füllen Sie den Formular aus!</h4>
-        <form action="confirmOrder.html">
-      
-          <label for="fname">Vorname</label>
-          <input type="text" id="fname" required>
-      
-          <label for="lname">Nachname</label>
-          <input type="text" id="lname" required>
-          <label for="address">Adresse</label>
-          <input placeholder="Straße, Hausnummer" type="text" id="address" required>
-          <label>Stadt</label>
-          <input type="text" required>
-          <label>PLZ</label>
-          <input type="text" required>            
-          <label for="country">Staat</label>
-          <select id="country">
-            <option value="australia">Deutschland</option>
-            <option value="canada">Österreich</option>
-            <option value="usa">Schweiz</option>
-          </select>      
-          <label for="subject">Zusätzliche Information</label>
-          <textarea id="subject" name="subject" style="height:50px"></textarea>
-          <label>Ich stimme die Bedingungen zu!</label>
-          <br>
-          <input type="checkbox" style="width:20px;
-          height:20px;" required>
-          <br>
-          <input type="submit" value="Bestellen">
-        </form>        
-      </div>
-</body>
+      <script>postOrder()</script>
+      <h1>Bestellbestätigung</h1>
+      <h3>Vielen Dank für Ihren Einkauf. Die Ware wird nie bei Ihnen ankommen. Ihr Lebensmittel24 Team.</h3>
+      <button class="btn btn-danger" onclick="toHomepage()">Zurück zur Startseite</button>
+      <img src="https://seybold.de/seybold-inhalt/uploads/Gr%C3%BCnerHaken-mit-M%C3%A4nnchen-1030x1030.jpg" width="1200" height="600" 
+     alt="Logo für HTML-Seminar">
+  </body>
 </html>
