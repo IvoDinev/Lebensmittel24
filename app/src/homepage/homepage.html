@@ -16,68 +16,227 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="../navigation.css" />
-    <title>Lebensmittel24</title>
+    <title>Lebensmittel24 | Home</title>
+    <link rel="stylesheet" href="../navigation.css" type="text/css">    
+    <link rel="stylesheet" href="homepage.css" type="text/css">      
   </head>
 
   <body>
-    <div class="nav-div">
-      <img class="navlogo" src="../common-pictures/Lebensmittel24Logo.jpg">
-      <img class="navimg" src="../common-pictures/food.jpg">
-      <img class="navimg" src="../common-pictures/food2.jpg">
-      <img class="navimg" src="../common-pictures/oreo.jpg">
-      <img class="navimg" src="../common-pictures/milk.jpg">
-      <img class="navimg" src="../common-pictures/fruits.jpg">
-      <img class="navimg" src="../common-pictures/burger.jpg">
-      <img class="navimg" src="../common-pictures/food3.jpg">
-      <img class="navimg" src="../common-pictures/pizza.jpg">
-      <img class="navimg" src="../common-pictures/food4.jpg">
+    <div>
+      <div class="nav-div">
+        <img class="navlogo" src="../common-pictures/Lebensmittel24Logo.jpg">
+        <img class="navimg" src="../common-pictures/food.jpg">
+        <img class="navimg" src="../common-pictures/food2.jpg">
+        <img class="navimg" src="../common-pictures/oreo.jpg">
+        <img class="navimg" src="../common-pictures/milk.jpg">
+        <img class="navimg" src="../common-pictures/fruits.jpg">
+        <img class="navimg" src="../common-pictures/burger.jpg">
+        <img class="navimg" src="../common-pictures/food3.jpg">
+        <img class="navimg" src="../common-pictures/pizza.jpg">
+        <img class="navimg" src="../common-pictures/food4.jpg">
+      </div>
+      <nav class="navbar navbar-inverse">
+        <ul class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li >
+              <a href="../homepage/homepage.html" class="icon-selected" data-toggle="tooltip" title="Home"
+                ><i class="fa fa-home fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a href="../products/milkproducts/milk.html">Milchprodukte</a>
+            </li>
+            <li>
+              <a href="../products/meatAndFish/meatFish.html"
+                >Fisch und Fleisch</a
+              >
+            </li> 
+            <li><a href="../products/drinks/drinks.html">Getränke</a></li>        
+            <li>
+              <a href="../products/fruitsAndVegetables/fruitsVegetables.html"
+                >Obst und Gemüse</a
+              >
+            </li>
+            <li class="dropdown">
+              <a class="dropbtn" href="../products/others/otherProducts.html"
+                >weitere</a>              
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../contactPage/contactPage.html">
+                Kontakt</a>
+            </li>
+            <li>
+              <a class="icon"
+                href="../shoppingCart/cart.html"            
+                data-toggle="tooltip"
+                title="Zum Warenkorb!"
+                ><i class="fa fa-shopping-cart fa-2x"></i
+              ></a>
+            </li>
+          </ul>
+      </nav>
+        <div class="text-center">
+          <h1>Lebensmittel24</h1>
+          <p class="lead">Wir bieten ihnen alles, was sie für Zuhause brauchen!</p>
+        </div>
+        <div class="container">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">Orangensaft</h4>
+              </div>
+              <div class="card-body">
+                <h1>0,85€ <small class="text-muted">/ 1L</small></h1>
+                <ul class="mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://www.konsum-leipzig.de/media/image/79/11/d1/DV019_4311596442218_PER5hW7OXWhEf7TI.png" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/drinks/drinks.html'">Zur Kategorie</button>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">Alaska-Seelachsfilet</h4>
+              </div>
+              <div class="card-body">
+                <h1>2,99€ <small class="text-muted">/ 200g</small></h1>
+                <ul class="mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://www.konsum-leipzig.de/media/image/64/06/83/DV019_4311501669051_PERJWh9KaUirHeAf.png" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/meatAndFish/meatFish.html'">Zur Kategorie</button>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">IQOS HEETS Purple Label</h4>
+              </div>
+              <div class="card-body">
+                <h1>5€ <small class="text-muted">/ Schachtel</small></h1>
+                <ul class=""mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://gigarettes.com/97-large_default/heets-purple.jpg" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/others/otherProducts.html'">Zur Kategorie</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">Spiced Gold Rum!</h4>
+              </div>
+              <div class="card-body">
+                <h1>11,99€ <small class="text-muted">/ st</small></h1>
+                <ul class="mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://www.konsum-leipzig.de/media/image/53/6f/cf/DV019_5000299223017_VOR9dIAEDC8sivch.png" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/drinks/drinks.html'">Zur Kategorie</button>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">Zewa Ultra Soft Toilettenpapier</h4>
+              </div>
+              <div class="card-body">
+                <h1>3€ <small class="text-muted">/ Packung</small></h1>
+                <ul class="mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://cdn02.dm-static.com/images/mediacatalog/h7322540739442-1822061/productimage_1120x1720/1574219861000/7322540739442-1822061_org.png" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/others/otherProducts.html'">Zur Kategorie</button>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="my-0">Schweine Minutensteaks</h4>
+              </div>
+              <div class="card-body">
+                <h1>2,99€ <small class="text-muted">/ 300g</small></h1>
+                <ul class="mt-3 mb-4">
+                  <div class="images">
+                    <img src="https://www.konsum-leipzig.de/media/image/ec/a4/06/5551475817.png" height="200" width="200">
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary" onclick="window.location.href='../products/meatAndFish/meatFish.html'">Zur Kategorie</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <h3>Navigation</h3>
+                <ul class="list-unstyled">
+                  <li><a href="../homepage/homepage.html">Home</a></li>
+                  <li><a href="../products/milkproducts/milk.html">Milchprodukte</a></li>
+                  <li><a href="../products/meatAndFish/meatFish.html">Fisch und Fleisch</a></li>
+                  <li><a href="../products/drinks/drinks.html">Getränke</a></li>
+                  <li><a href="../products/fruitsAndVegetables/fruitsVegetables.html">Obst und Gemüse</a></li>
+                  <li><a href="../products/others/otherProducts.html">Andere</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <h3>Highlights</h3>
+                <div class="media">
+                  <a href="../products/meatAndFish/meatFish.html" class="pull-left">
+                    <img class="prodImg" src="https://www.konsum-leipzig.de/media/image/64/06/83/DV019_4311501669051_PERJWh9KaUirHeAf.png" alt="" class="media-object" />
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Alaska-Seelachsfilet 200g</h4>
+                    <p>Preis: 2.49€</p>
+                  </div>
+                </div>
+                
+                <div class="media">
+                  <a href="../products/fruitsAndVegetables/fruitsVegetables.html" class="pull-left">
+                    <img  class="prodImg" src="https://img.rewe-static.de/2430479/24569670_digital-image.png?output-quality=75&fit=inside|600:600" alt="" class="media-object" />
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Rotkohl</h4>
+                    <p>Preis je Stück: 0.79€</p>
+                  </div>
+                </div>
+                
+                <div class="media">
+                  <a href="../products/fruitsAndVegetables/fruitsVegetables.html" class="pull-left">
+                    <img  class="prodImg" src="http://www.dole.de/var/storage/images/produkte/bio-produkte/bio-bananen/374-39-ger-DE/Bio-Bananen_productdetailstageimage.png" alt="" class="media-object" />
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Bananen</h4>
+                    <p>Preis je Stück: 0.15€</p>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                <h3>Impressum</h3>
+                <ul class="list-unstyled">
+                  <li>Lebensmittel24-Shop</li>
+                  <li>Telefon: &nbsp;&nbsp;+49 262626</li>
+                  <li>E-Mail: &nbsp;&nbsp;&nbsp;&nbsp;lebensmittel24@mail.com</li>
+                  <li>Anschrift: Universitätsplatz 2 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 39106 Magdeburg</li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          <div class="copyright text-center">
+            Copyright &copy; 2020 <span>Lebensmittel 24</span>
+          </div>
+        </footer>
     </div>
-    <nav class="navbar navbar-inverse">
-      <ul class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li >
-            <a class="icon-selected" data-toggle="tooltip" title="Home"
-              ><i class="fa fa-home fa-2x"></i
-            ></a>
-          </li>
-          <li>
-            <a href="../products/milkproducts/milk.html">Milchprodukte</a>
-          </li>
-          <li>
-            <a href="../products/meatAndFish/meatFish.html"
-              >Fisch und Fleisch</a
-            >
-          </li>
-          <li><a href="../products/drinks/drinks.html">Getränke</a></li>
-          <li>
-            <a href="../products/fruitsAndVegetables/fruitsVegetables.html"
-              >Obst und Gemüse</a
-            >
-          </li>
-          <li class="dropdown">
-            <a class="dropbtn" href="../products/others/otherProducts.html"
-              >weitere<span class="caret"></span
-            ></a>
-            <ul class="dropdown-content">
-              <a class="dropdown-item">Baby & Kinder</a>
-              <a class="dropdown-item">Tabakwaren</a>
-              <a class="dropdown-item">Nonfood</a>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="icon"
-              href="../shoppingCart/cart.html"
-              data-toggle="tooltip"
-              title="Zum Warenkorb!"
-              ><i class="fa fa-shopping-cart fa-2x"></i
-            ></a>
-          </li>
-        </ul>
-    </nav>
-  
-    <h1>Webshop</h1>
   </body>
 </html>
